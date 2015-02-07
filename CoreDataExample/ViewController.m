@@ -64,7 +64,7 @@
     // Configure the cell...
     NSManagedObject *emp = [self.employee objectAtIndex:indexPath.row];
     [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", [emp valueForKey:@"name"], [emp valueForKey:@"designation"]]];
-    //[cell.detailTextLabel setText:[device valueForKey:@"company"]];
+    [cell.detailTextLabel setText:[emp valueForKey:@"city"]];
     
     return cell;
 }
@@ -74,6 +74,10 @@
 }
 
 - (IBAction)add:(id)sender {
+    
+    [self performSegueWithIdentifier:@"NextScreen"
+                              sender:self];
+
     
 }
 @end

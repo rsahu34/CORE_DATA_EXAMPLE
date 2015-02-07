@@ -33,6 +33,7 @@
     
     // Create a new managed object
     NSManagedObject *newEmployee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
+    
     [newEmployee setValue:self.nameTextField.text forKey:@"name"];
     [newEmployee setValue:self.designationTextfield.text forKey:@"designation"];
     [newEmployee setValue:self.cityTextField.text forKey:@"city"];
